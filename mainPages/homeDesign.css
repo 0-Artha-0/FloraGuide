@@ -4,7 +4,7 @@ section {
 }
 
 body {
-    background-image: url('/Images/home.jpg');
+    background-image: url('../Images/home.jpg');
     background-size: cover;
     color: white;
     font-family: 'Courier New', Courier, monospace;
