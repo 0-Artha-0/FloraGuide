@@ -11,7 +11,7 @@ function start() {
         for (var i = 0; i < collectNum; i++) {
             content += '<div style="margin: 10px; padding: 10px; background-color: rgb(0, 0, 0, 0.5);' +
                 'height: 200px; border-radius: 10px;" ondblclick="removePlant(' + i + ')">' +
-                '<img src="' + collection[i] + '" style=" height: 200px; item-align: center;"></div>';
+                '<img src="../Images/plantStickers/' + collection[i] + '" style=" height: 200px; item-align: center;"></div>';
         }
 
         // add the collection content to the main element in the page
