@@ -38,7 +38,7 @@ function addPlant() {
 
             // check if plant is already added to the collection
             for (var j of collection) {
-                if (j === plantStickers[i]) {
+                if (("../Images/plantStickers/"+j) === plantStickers[i]) {
                     alert("Plant already added.");
                     notsaved = false;
                     break;
