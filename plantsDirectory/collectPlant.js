@@ -15,7 +15,7 @@ const plantNames = ["Aloe", "Flamingo", "Areca", "Bird's", "Boston",
 
 // function start when page loads 
 function start() {
-    // get the collection from the browser local storage or make a new collection if there's none
+    // get the collection from the browser's local storage or make a new collection if there's none
     var collection = JSON.parse(localStorage.getItem("collections")) || [];
 
     var collectBtn = document.getElementById("collectBtn");
@@ -27,7 +27,7 @@ function addPlant() {
     var plantName = document.getElementById("names");
     var plant = plantName.innerText;
 
-    // get the existing collection list from the browser local storage
+    // get the existing collection list from the browser's local storage
     // or make a new one if there's none
     var collection = JSON.parse(localStorage.getItem("collections")) || [];
 
@@ -38,16 +38,16 @@ function addPlant() {
 
             // check if plant is already added to the collection
             for (var j of collection) {
-                if (("../Images/plantStickers/"+j) === plantStickers[i]) {
+                if (j === plantStickers[i]) {
                     alert("Plant already added.");
                     notsaved = false;
                     break;
                 }
             }
 
-            // if plant was not added peviously, add it to the collection
+            // if plant was not added previously, add it to the collection
             if (notsaved) {
-                collection.push("../Images/plantStickers/" + plantStickers[i]);
+                collection.push(plantStickers[i]);
                 localStorage.setItem("collections", JSON.stringify(collection));
 
                 alert("Plant added to collection successfully!");
