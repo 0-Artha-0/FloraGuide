@@ -1,5 +1,7 @@
 body {
-    background-color: rgb(250, 250, 230);
+     background-color: rgb(250, 250, 230);
+    background-image: URL(../Images/room.jpg);
+    background-size: cover;
     margin: 0px;
 }
 
@@ -71,7 +73,7 @@ nav.linksbar li:hover {
 
 footer {
     text-align: center;
-    background-image: url("plant.jpg");
+    background-image: URL("../Images/plant.jpg");
     background-size: cover;
     color: white;
     font-weight: bolder;
