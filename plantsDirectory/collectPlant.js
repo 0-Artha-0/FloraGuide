@@ -15,8 +15,8 @@ const plantNames = ["Aloe", "Flamingo", "Areca", "Bird's", "Boston",
 
 // function start when page loads 
 function start() {
+    // get the collection from the browser local storage or make a new collection if there's none
     var collection = JSON.parse(localStorage.getItem("collections")) || [];
-    console.log(collection);
 
     var collectBtn = document.getElementById("collectBtn");
     collectBtn.addEventListener("click", addPlant, false);
@@ -47,7 +47,7 @@ function addPlant() {
 
             // if plant was not added peviously, add it to the collection
             if (notsaved) {
-                collection.push(plantStickers[i]);
+                collection.push("../Images/plantStickers/" + plantStickers[i]);
                 localStorage.setItem("collections", JSON.stringify(collection));
 
                 alert("Plant added to collection successfully!");
