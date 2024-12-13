@@ -111,7 +111,7 @@ div.intro {
     padding: 10px;
 }
 
-div.collect {
+button.collect {
     font-size: 75%;
     font-weight: bolder;
     font-family: Papyrus, Courier New, Georgia, monospace, Serif;
@@ -129,7 +129,7 @@ div.collect {
     z-index: 1;
 }
 
-div.collect a {
+button.collect a {
     color: white;
 }
 
