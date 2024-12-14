@@ -30,6 +30,12 @@ function removePlant(i) {
     // update the local storage with the new list
     localStorage.setItem("collections", JSON.stringify(collection));
 
+     var collectionlinks = JSON.parse(localStorage.getItem("collectionslnk")) || [];
+    // remove the specified plant using the passed index of the collection
+    collectionlinks.splice(i, 1);
+    // update the local storage with the new list
+    localStorage.setItem("collectionslnk", JSON.stringify(collectionlinks));
+
     // reload the page to view the updated collection
     location.reload();
 }
