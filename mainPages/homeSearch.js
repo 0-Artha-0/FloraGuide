@@ -13,7 +13,7 @@ function send() {
 
     // if there is a search input go to the directory page
     if (searchTerm.trim()) {
-        window.location.href = "directory.html";
+        window.location.href = "mainPages/directory.html";
     }
     else {
         alert("Please enter a search term.");
