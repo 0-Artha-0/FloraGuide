@@ -13,10 +13,18 @@ const plantNames = ["Aloe", "Flamingo", "Areca", "Bird's", "Boston",
     "Ponytail", "Pothos", "Prayer", "Rubber", "Snake", "Spider", "String",
     "Swiss", "ZZ Plant"];
 
+const plantLinks = ["AloeVera.html", "Anthurium.html", "ArecaPalm.html", "AspleniumNidus.html", "NephrolepisExaltata.html", 
+                    "CalatheaSpp.html", "CastIronPlant.html", "ChineseEvergreen.html", "PileaPeperomioides.html",
+                    "Croton.html", "Dieffenbachia.html", "Dracaena.html", "EnglishIvy.html", "FicusLyrata.html", "Maidenhair.html",
+                    "MonsteraDeliciosa.html", "ParlorPalm.html", "Spathiphyllum.html", "Peperomia.html", "Philodendron.html",
+                    "PonytailPalm.html", "Pothos.html", "PrayerPlant.html", "Rubber.html", "Snake.html", "Spider.html", 
+                    "Pearls.html", "SwissCheesePlant.html", "ZZplant.html"];
+
 // function start when page loads 
 function start() {
     // get the collection from the browser's local storage or make a new collection if there's none
     var collection = JSON.parse(localStorage.getItem("collections")) || [];
+    var collectionlinks = JSON.parse(localStorage.getItem("collectionslnk")) || [];
 
     var collectBtn = document.getElementById("collectBtn");
     collectBtn.addEventListener("click", addPlant, false);
@@ -30,6 +38,7 @@ function addPlant() {
     // get the existing collection list from the browser's local storage
     // or make a new one if there's none
     var collection = JSON.parse(localStorage.getItem("collections")) || [];
+    var collectionlinks = JSON.parse(localStorage.getItem("collectionslnk")) || [];
 
     // loop and check plant name to determine image location to add to the collection
     for (var i = 0; i < plantNames.length; i++) {
@@ -49,6 +58,7 @@ function addPlant() {
             if (notsaved) {
                 collection.push(plantStickers[i]);
                 localStorage.setItem("collections", JSON.stringify(collection));
+                localStorage.setItem("collectionslnk", JSON.stringify(collectionlinks));
 
                 alert("Plant added to collection successfully!");
                 break;
