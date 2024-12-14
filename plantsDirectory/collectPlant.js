@@ -57,6 +57,7 @@ function addPlant() {
             // if plant was not added previously, add it to the collection
             if (notsaved) {
                 collection.push(plantStickers[i]);
+                collectionlinks.push(plantLinks[i]);
                 localStorage.setItem("collections", JSON.stringify(collection));
                 localStorage.setItem("collectionslnk", JSON.stringify(collectionlinks));
 
